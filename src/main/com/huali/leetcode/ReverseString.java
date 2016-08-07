@@ -6,11 +6,18 @@ package com.huali.leetcode;
  */
 public class ReverseString {
     public String reverseString(String s) {
-        int len = s.length();
-        String sr = "";
-        for (int i = 0; i <= len; i++) {
-            sr += s.charAt(len - i - 1);
+        StringBuilder sr=new StringBuilder();;
+        if (s == null){
+            return null;
         }
-        return sr;
+        if (s.equals("")){
+            return sr.toString();
+        }
+        int length = s.length();
+
+        for ( int i = 0 ; i <length;i++){
+            sr.append( s.charAt(length-i-1));
+        }
+        return sr.toString();
     }
 }
